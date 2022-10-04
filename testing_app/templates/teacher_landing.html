@@ -1,0 +1,12 @@
+{% extends "base_landing.html" %}
+
+{% block content %}
+<body>
+    <form method="POST" enctype="multipart/form-data" action="/">
+        <input type="file" id="myFile" name="questions" accept=".csv">
+        <input type="submit" value="Upload CSV file">
+    </form>
+  <br>
+  </body>
+  {% endblock %}
+</html>

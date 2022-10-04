@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/nav_bar.css')}}">
+
+</head>
+<header>
+    <h1>Testing <span>Platform</span></h1>
+    <nav>
+        <ul>
+            <li>
+                <form action="{{url_for('landing')}}">
+                <button type="submit">Home</button>
+                </form>
+            </li>
+            <li>
+                <form action="{{url_for('landing')}}">
+                <button type="submit">Results</button>
+                </form>
+            </li>
+            <li>
+                <form action="{{url_for('landing')}}">
+                <button type="submit">About us</button>
+                </form>
+            </li>
+            <li>
+                <form action="{{url_for('logout')}}">
+                <button type="submit">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
+<body>
+{% block content %}
+{% endblock %}
+</body>
+</html>

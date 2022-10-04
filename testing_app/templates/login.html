@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/css/stylesheet.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <div class="alert-message">
+                    <p>{{msg}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+{% endblock %}
+<body>
+<div class="form-group">
+    <img src="static/logo.png" class="image-logo"/>
+
+    <h1>Login</h1>
+    <form action="{{url_for('login')}}" method="post">
+        <label class="form-group-label"> Username <br>
+        <input type="text" name="username" id="username" class="form-group-input" required >
+        </label>
+        <br><br>
+        <label class="form-group-label">
+            Password <br>
+        <input type="password" name="password" id="password" required class="form-group-input"><br><br>
+        </label><br>
+        <button input type="submit" value="Login">Login</button>
+    </form>
+    <p>Don't have an account?</p>
+    <form action="{{url_for('register')}}">
+        <button type="submit">Create new account here</button>
+    </form>
+</div>
+</body>
+</html>

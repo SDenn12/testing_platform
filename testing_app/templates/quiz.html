@@ -1,0 +1,47 @@
+{% extends "base_landing.html" %}
+{% block content %}
+<body>
+    <div class="test_code">
+        {% for list in array %}
+        <div style="font-size: 30px;">
+            
+            <b>Question {{list.qnum}}</b>
+            <br>
+            <b>{{list.question}}</b>
+        </div>
+
+        <form id="quickForm" action="/submit" method="POST">
+            <br>
+            <div>
+                <input class="test_code-input" type="radio" name="mcq{{list.qnum}}" id="option1" value='{{list.option1}}' required>
+                <label class="test_code-label" for="flexRadioDefault1">
+                    {{list.option1}}
+                </label>
+            </div>
+        
+            <div>
+                <input class="test_code-input" type="radio" name="mcq{{list.qnum}}" id="option2"  value='{{list.option2}}'>
+                <label class="test_code-label" for="flexRadioDefault2">
+                    {{list.option2}}
+                </label>
+            </div>
+
+            <div>
+                <input class="test_code-input" type="radio" name="mcq{{list.qnum}}" id="option3"  value='{{list.option3}}'>
+                <label class="test_code-label" for="flexRadioDefault3">
+                    {{list.option3}}
+                </label>
+            </div>
+            <input type="hidden" name="crct{{list.qnum}}" id="answer" value="{{list.answer}}">
+            <br>
+            {% endfor %}
+            <div>
+                <button type="submit" class="test_code-button">Submit</button>
+            </div>
+            <input type="hidden" name="max_list" id="max_list" value="{{max_list}}">
+            
+            <br>
+        </form>
+    </div>
+</body>
+{% endblock %}

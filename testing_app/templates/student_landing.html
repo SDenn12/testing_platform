@@ -1,0 +1,14 @@
+{% extends "base_landing.html" %}
+{% block content %}
+<body>
+<div class="test_code">
+<form action="{{url_for('student')}}" method="post">
+<label class="test_group-label"> Enter Test Code <br><br>
+<input class="test_group-input" type="text" name="test_id" id="test_id" required >
+</label>
+<br><br>
+<button class="test_code-button" type="submit">Submit</button>
+</form>
+</div>
+{% endblock %}
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/css/stylesheet.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <div class="alert-message">
+                    <p>{{msg}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+{% endblock %}
+
+<body>
+
+<div class="form-group">
+    <img src="static/logo.png" class="image-logo">
+    <h1>Register</h1>
+    <form action="{{url_for('register')}}" method="post" >
+        <label class="form-group-label"> Email <br>
+            <input type="email" name="email" id="email" required class="form-group-input">
+
+        </label>
+        <br><br>
+        <label class="form-group-label"> Username <br>
+            <input type="text" name="username" id="username" required class="form-group-input">
+        </label>
+        <br><br>
+        <label class="form-group-label"> Password<br>
+            <input type="password" name="password" id="password"  required class="form-group-input">
+        </label>
+        <br><br>
+
+        <p>Please select your role.</p>
+        <input type="radio" id="student" name="role" value="student" required>
+        <label for="student" class="form-group-label">Student</label>
+        <br>
+        <input type="radio" id="teacher" name="role" value="teacher">
+        <label for="teacher" class="form-group-label">Teacher</label>
+        <br><br>
+        <button input type="submit" value="Register">Register</button>
+    </form>
+        <p>Already have an account?</p>
+    <form action="{{url_for('login')}}">
+        <button type="submit">Login here</button>
+    </form>
+</div>
+</body>
+</html>
