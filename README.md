@@ -11,7 +11,8 @@
 >Students who log in should be greeted with a box to enter their test code where they will be redirected to their test
 
 
-![](plan/user_diagram.png)
+![user_diagram](https://user-images.githubusercontent.com/110126036/193938347-af52c5aa-3641-4b00-b68b-265b0a304698.PNG)
+
 
 ## User Stories
 
@@ -54,7 +55,7 @@ The user must be able to:
 
 What are the features of the app? We can then split the different sections for a microservice architecture. The tools to implement the solution used can be changed at a later date.
 
-![](architecture.png)
+![architecture](https://user-images.githubusercontent.com/110126036/193938296-977871fd-d2b1-489f-861a-59bb52b3d6e2.png)
 
 NOTE: Each box should be contained within its own container, with the exception of the frontend and backend website which both share a container.
 
