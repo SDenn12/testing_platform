@@ -220,20 +220,4 @@ Shows the user all of the previous tests that they have taken and their respecti
 - Directory system for admin/teachers
 - Displays results of users(from mongodb)
 
-# Possible Extensions
-
- ## Create functionality to retrieve the tests
-
-## Make frontend for uploading tests prettier
-- Redirect to a image of the loaded CSV using pd.to_html
-- Include the test number in this
-
-## Finally make Front End for sitting test
-- See what is easier out of moving to a different page to answer each question or creating a form with radio box.
-
-## REFACTOR ALL DB INTO MONGO
-### Purpose
-- For session data so the landing page and sign-in/registration pages can be separated.
-- For credential data
-
 
