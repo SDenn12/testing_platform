@@ -38,7 +38,7 @@ def register():
                 "email": email,
                 "role": role
             }                      
-            if len(validity) != 0:
+            if len(validity) == 0:
                 collection.insert_one(credentials)
                 return redirect(url_for('login'))
             else:
