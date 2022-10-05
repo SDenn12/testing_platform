@@ -1,5 +1,13 @@
 # Testing Platform Project
 
+## How to run the app
+
+1. Install the repository
+2. Run `pip install .`
+3. Follow mongo-setup.md
+4. Set the environment variable `export DB_HOST=db_ip_address` the db ip address is the ip address of the server where the DB is running
+5. `python app.py` runs the app.
+
 ## Description
 
 >A testing platform which will be used to test students on their knowledge of varied subject areas. The administrator controls the test questions, the program should find the solution to the question and match that against the students answers when they come to answer the test.
