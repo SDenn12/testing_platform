@@ -25,7 +25,7 @@ def register():
         role = request.form['role']
         format = CFV.valid_creds(email, username, password)
         if format == "Success":
-            generate_new = 6
+            generate_new = randint(1000,10000)
             collection = db["Creds"]
             results = collection.find({"username": str(username), "email": str(email)})
             validity = []

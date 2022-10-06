@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 app.secret_key = 'super secret key'
-db_ip = os.environ['DB_HOST']
+db_ip = os.getenv('DB_HOST')
 
 client = MongoClient(f"mongodb://{db_ip}:27017/my_db")
 
