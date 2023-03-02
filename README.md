@@ -1,7 +1,13 @@
 # Testing Platform Project
 
-## How to run the app
+## Install Dependencies (running on ubuntu 2004)
+1. apt get update
+2. apt install python3-pip
+3. apt install python3-venv
+4. python3 -m venv venv
+5. source venv/bin/activate
 
+## How to run the app
 1. Install the repository
 2. Run `pip install .`
 3. Follow mongo-setup.md
